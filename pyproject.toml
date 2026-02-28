@@ -1,0 +1,51 @@
+[project]
+name = "ydns-py"
+version = "0.1.0"
+description = "YDNS dynamic DNS updater"
+readme = "README.md"
+authors = [
+  { name = "JK Laiho", email = "jklaiho@iki.fi" }
+]
+license = "Unlicense"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: The Unlicense (Unlicense)",
+  "Operating System :: POSIX",
+  "Programming Language :: Python :: 3",
+  "Topic :: Internet :: Name Service (DNS)",
+  "Topic :: System :: Networking",
+  "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+ydns-py = "ydns_py:main"
+
+[build-system]
+requires = ["uv_build >= 0.10.0, <0.11.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+cache-dir = "~/.cache/ruff"
+line-length = 120
+
+[tool.ruff.format]
+line-ending = "lf"
+quote-style = "preserve"
+
+[tool.ruff.lint]
+# Defaults from https://docs.astral.sh/ruff/settings/#lint_select
+# Additions:
+# - "W" for a closer match to flake8 behaviour
+# - "I" for isort
+# - "B" for flake8-bugbear
+# - "A" for flake8-builtins
+# - "C4" for flake8-comprehensions
+# - "G" for flake8-logging-format
+# - "PTH" for flake8-use-pathlib
+# - "UP" for pyupgrade
+# - "RUF" for ruff-specific rules
+# Ruff docs recommend select instead of extend-select for the sake of explicitness.
+select = ["E4", "E7", "E9", "F", "W", "I", "B", "A", "C4", "G", "PTH", "UP", "RUF"]
