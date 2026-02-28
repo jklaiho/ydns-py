@@ -140,6 +140,8 @@ Pull requests are welcome. Be warned though, this project was born out of a pers
 
 Contributors should install [prek](https://prek.j178.dev) and then activate it for their cloned git repo using `prek install --install-hooks`. The hooks handle formatting and linting with [Ruff](https://astral.sh/ruff).
 
+Install [uv](https://astral.sh/uv). Run `uv sync` to create `.venv`. This installs ydns-py in editable mode, so to test your changes just run `uv run ydns-py`.
+
 ## License
 
 This project is in the public domain, as described by [The Unlicense](https://unlicense.org).
