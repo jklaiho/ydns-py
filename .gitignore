@@ -1,0 +1,7 @@
+__pycache__/
+*.py[cod]
+dist/
+.DS_Store
+.venv/
+# Only useful for local dev in this project
+uv.lock
