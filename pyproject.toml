@@ -1,6 +1,6 @@
 [project]
 name = "ydns-py"
-version = "0.1.0"
+version = "0.1.1"
 description = "YDNS dynamic DNS updater"
 readme = "README.md"
 authors = [
@@ -22,6 +22,10 @@ dependencies = []
 
 [project.scripts]
 ydns-py = "ydns_py:main"
+
+[project.urls]
+repository = "https://github.com/jklaiho/ydns-py"
+changelog = "https://github.com/jklaiho/ydns-py/blob/main/CHANGELOG.md"
 
 [build-system]
 requires = ["uv_build >= 0.10.0, <0.11.0"]
